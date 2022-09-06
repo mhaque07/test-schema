@@ -1,40 +1,41 @@
-      $schema: http://json-schema.org/draft-07/schema#
-      type: object
-      title: Ingest data to Allen Event Schema
-      required:
-        - retryCount
-        - smcData
-        - specData
-        - eventAndSchema
-        - rawSpec
-      properties:
-        retryCount:
-          examples:
-            - 1
-          type: string
-          title: Retry Count
-          $id: "#/properties/retryCount"
-        smcData:
-          examples:
-            - {}
-          type: object
-          title: SMC Data
-          $id: "#/properties/smcData"
-        specData:
-          examples:
-            - {}
-          type: object
-          title: Specification Data
-          $id: "#/properties/specData"
-        eventAndSchema:
-          examples:
-            - {}
-          type: object
-          title: Event and Schema
-          $id: "#/properties/eventAndSchema"
-        rawSpec:
-          examples:
-            - {}
-          type: object
-          title: Raw Specification
-          $id: "#/properties/rawSpec"
+--- 
+$schema: "http://json-schema.org/draft-07/schema#"
+properties: 
+  eventAndSchema: 
+    $id: "#/properties/eventAndSchema"
+    examples: 
+      - {}
+    title: "Event and Schema"
+    type: object
+  rawSpec: 
+    $id: "#/properties/rawSpec"
+    examples: 
+      - {}
+    title: "Raw Specification"
+    type: object
+  retryCount: 
+    $id: "#/properties/retryCount"
+    examples: 
+      - 1
+    title: "Retry Count"
+    type: string
+  smcData: 
+    $id: "#/properties/smcData"
+    examples: 
+      - {}
+    title: "SMC Data"
+    type: object
+  specData: 
+    $id: "#/properties/specData"
+    examples: 
+      - {}
+    title: "Specification Data"
+    type: object
+required: 
+  - retryCount
+  - smcData
+  - specData
+  - eventAndSchema
+  - rawSpec
+title: "Ingest data to Allen Event Schema"
+type: object
