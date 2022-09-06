@@ -38,3 +38,9 @@ properties:
     examples: 
       - {}
     title: "Specification Data"
+  userData:
+    type: object
+    $ref: "inner.json"
+    examples: 
+      - {}
+    title: "Specification Data" 
