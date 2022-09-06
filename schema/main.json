@@ -1,4 +1,12 @@
 $schema: "http://json-schema.org/draft-07/schema#"
+type: object
+title: "Ingest data to Allen Event Schema"
+required: 
+  - retryCount
+  - smcData
+  - specData
+  - eventAndSchema
+  - rawSpec
 properties: 
   eventAndSchema: 
     $id: "#/properties/eventAndSchema"
@@ -24,17 +32,9 @@ properties:
       - {}
     title: "SMC Data"
     type: object
-  specData: 
+  specData:
+    type: object
     $id: "#/properties/specData"
     examples: 
       - {}
     title: "Specification Data"
-    type: object
-required: 
-  - retryCount
-  - smcData
-  - specData
-  - eventAndSchema
-  - rawSpec
-title: "Ingest data to Allen Event Schema"
-type: object
