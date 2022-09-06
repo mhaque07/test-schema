@@ -1,0 +1,43 @@
+{
+    "description": "Schema for the validation of stock adjustment messages.",
+    "title": "test file",
+    "$id": "main.json",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$defs": {
+        "LUStockStatus": {
+            "type": "object",
+            "properties": {
+                "StockStatus": {
+                    "type": "string"
+                },
+                "StockStatusSubCode": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                }
+            },
+            "required": [
+                "StockStatus"
+            ],
+            "additionalProperties": false
+        },
+        "ConsignmentId": {
+            "type": "object",
+            "properties": {
+                "CreatorReference": {
+                    "$ref": "inner.json#/$defs/section1"
+                },
+                "ConsignmentNumber": {
+                    "type": "string",
+                    "maxLength": 12,
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "CreatorReference",
+                "ConsignmentNumber"
+            ],
+            "additionalProperties": false
+        }
+}
+}
