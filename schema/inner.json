@@ -1,0 +1,16 @@
+{
+    "description": "Schema for the validation of stock adjustment messages.",
+    "title": "inner file",
+    "$id": "inner.json",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$defs": {
+        "section1": {
+            "type": "object",
+            "properties": {
+                "testData": {
+                    "type": "string"
+                }
+            }
+        } 
+}
+}
