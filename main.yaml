@@ -1,0 +1,46 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+type: object
+title: "Ingest data to Allen Event Schema"
+required: 
+  - retryCount
+  - smcData
+  - specData
+  - eventAndSchema
+  - rawSpec
+properties: 
+  eventAndSchema: 
+    $id: "#/properties/eventAndSchema"
+    examples: 
+      - {}
+    title: "Event and Schema"
+    type: object
+  rawSpec: 
+    $id: "#/properties/rawSpec"
+    examples: 
+      - {}
+    title: "Raw Specification"
+    type: object
+  retryCount: 
+    $id: "#/properties/retryCount"
+    examples: 
+      - 1
+    title: "Retry Count"
+    type: string
+  smcData: 
+    $id: "#/properties/smcData"
+    examples: 
+      - {}
+    title: "SMC Data"
+    type: object
+  specData:
+    type: object
+    $id: "#/properties/specData"
+    examples: 
+      - {}
+    title: "Specification Data"
+  userData:
+    type: object
+    $ref: "inner.yaml"
+    examples: 
+      - {}
+    title: "Specification Data" 
